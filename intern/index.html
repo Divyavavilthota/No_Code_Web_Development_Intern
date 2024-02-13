@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rich Cuisine</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'General Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .form-container {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 10px;
+           
+            width: 25%;
+            background-color:bisque;
+            box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .slide-up-form {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .slide-up-form input,
+        .slide-up-form button {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .slide-up-form button {
+            background-color:orange;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        .slide-up-form button:hover {
+            background-color: #e6b800;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Village Food</h1>
+        <div class="navbar">
+            <ul>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="founder.html">FOUNDER</a></li>
+                <li><a href="hire.html">Why should You go ahead with Me?</a></li>
+                <li><a href="contactform.html">CONTACT</a></li>
+                <li><a class="deals" href="deals.html">SignUp</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <h3> Welcome to Village Food</h3>
+        <h1>Super Healthy and Natural Food.!</h1>
+        <p> lorem lorem lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, at!</p>
+    </div>
+    <div class="search" >
+        <input type="text" placeholder="Search Food">
+    </div>
+    
+    <div class="submit">
+        <a href="#"><button>Submit</button></a>
+    </div>
+    <div class="form-container" id="formContainer">
+        <form class="slide-up-form">
+            <h2 style="font-size:xx-large">FALT 15% OFF</h2><br>
+            <P>Enter your details and win a coupon worth 15%</P><br>
+            <input type="text" placeholder="Enter your phone number"><br>
+            <input type="email" placeholder="Enter your email address"><br>
+            <button type="submit">Show me coupon</button>
+        </form>
+    </div>
+    
+    <script src="example.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+/* Style for timer display */
+
+#timer {
+    font-size: 100px;
+    font-weight: bold;
+    margin-top:100px;
+    margin-bottom: 20px;
+    margin-left: 600px;
+
+  }
+  
+  /* Style for the sign-up button */
+  #signupButton {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left:620px;
+  }
+  
+  /* Disable the sign-up button when countdown reaches zero */
+  #signupButton:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+  

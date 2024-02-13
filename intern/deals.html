@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Countdown Timer and Call to Action</title>
+<style>
+    /* Style for CTA section */
+    body {
+        background-image: url('food.jpg');
+        background-size: cover; /* Adjust as needed */
+    }
+    #countdown{
+        text-align: center;
+        font-size: 100px; /* Increased font size for better visibility */
+        margin-bottom: 20px;
+        font-family: 'General Sans', sans-serif;
+        color: #B2AC88; /* Change color here */
+    }
+
+    .cta-section {
+        text-align: center;
+        padding: 40px 0;
+        color: #fada50;
+    }
+
+    .cta-button {
+        background-color: #007bff;
+        color:#fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 18px;
+        text-decoration: none;
+    }
+
+    .cta-button:hover {
+        background-color: #0056b3;
+    }
+    
+</style>
+</head>
+<body>
+<!-- Countdown Timer -->
+<div id="countdown" style="text-align: center; font-size: 24px; margin-bottom: 20px;"></div>
+
+<!-- Call to Action Section -->
+<section class="cta-section">
+    <h2>Sign up now!</h2>
+    <p>Don't miss out! Sign up now before time runs out.</p>
+    <a href="signup.html" class="cta-button">Sign Up</a>
+</section>
+
+<script>
+// Countdown Timer
+const countdownElement = document.getElementById('countdown');
+
+function countdown() {
+    const countDate = new Date().getTime() + (10 * 60 * 1000); // 10 minutes
+    const interval = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = countDate - now;
+
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        countdownElement.innerHTML = `${minutes}m ${seconds}s`;
+
+        if (distance < 0) {
+            clearInterval(interval);
+            countdownElement.innerHTML = 'EXPIRED';
+            // You can trigger any action here when the countdown expires
+        }
+    }, 1000);
+}
+
+// Start the countdown
+countdown();
+</script>
+
+</body>
+</html>
